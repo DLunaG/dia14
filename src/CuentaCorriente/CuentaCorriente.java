@@ -1,7 +1,7 @@
 package CuentaCorriente;
 
 public class CuentaCorriente {
-    float saldo;
+    private float saldo;
 
     public CuentaCorriente(float saldo){
         this.saldo = saldo;
@@ -17,10 +17,20 @@ public class CuentaCorriente {
     public void ingresar(float dinero){
         saldo += dinero;
     }
-    public void verSaldo(){
+    public float verSaldo(){
         System.out.println("Tiene " + saldo + "€");
         if(saldo > 1000000){
             System.out.println("Eres asquerosamente rico, comparte algo.");
         }
+        return saldo;
+    }
+
+
+    public float getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(float saldo) {
+        this.saldo = saldo;
     }
 }
